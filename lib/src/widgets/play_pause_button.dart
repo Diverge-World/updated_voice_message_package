@@ -26,6 +26,9 @@ class PlayPauseButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) => InkWell(
         onTap:() {
+          if(controller.isPLay==null||controller.isPLay==false){
+            controller.pausePlaying();
+          }
           controller.onClickPlay!();
           print('clicked>>');
         },

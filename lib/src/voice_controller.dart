@@ -49,6 +49,7 @@ class VoiceController extends MyTicker {
   StreamSubscription? positionStream;
   StreamSubscription? playerStateStream;
   double? downloadProgress = 0;
+  bool? isPLay ;
   final void Function()? onClickPlay;
   /// Gets the current playback position of the voice.
   double get currentMillSeconds {
@@ -87,6 +88,7 @@ class VoiceController extends MyTicker {
     required this.onPlaying,
     this.onError,
     this.onClickPlay,
+    this.isPLay,
     this.randoms,
   }) {
     if (randoms?.isEmpty ?? true) _setRandoms();
