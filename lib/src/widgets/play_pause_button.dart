@@ -25,15 +25,10 @@ class PlayPauseButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => InkWell(
-        onTap: controller.isDownloadError
-
-            /// faild loading audio
-            ? controller.play
-            : controller.isPlaying
-
-                /// playing or pause
-                ? controller.pausePlaying
-                : controller.play,
+        onTap:() {
+          controller.onClickPlay;
+          print('clicked>>');
+        },
         child: Container(
           height: size,
           width: size,
