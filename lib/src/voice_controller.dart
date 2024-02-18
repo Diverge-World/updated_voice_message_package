@@ -50,7 +50,7 @@ class VoiceController extends MyTicker {
   StreamSubscription? playerStateStream;
   double? downloadProgress = 0;
   bool? isPLay ;
-  final void Function()? onClickPlay;
+  final void Function(VoiceController controller)? onClickPlay;
   /// Gets the current playback position of the voice.
   double get currentMillSeconds {
     final c = currentDuration.inMilliseconds.toDouble();
